@@ -55,3 +55,55 @@ header.courses {
   line-height: 30px;
   color: #fff;
 }
+
+.videos-section .carousel-item.active, .videos-section .carousel-item-next, .videos-section .carousel-item-prev {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .videos-section .carousel-item  div {
+    display: block;
+    background-color: white;
+  }
+  .videos-section .carousel-item > div:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) { 
+  .videos-section .carousel-item-right.active, .videos-section .carousel-item-next {
+    transform: translateX(100%);
+  }
+  .videos-section .carousel-item-left.active, .videos-section .carousel-item-prev {
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width: 768px) {  
+  .videos-section .carousel-item-right.active,
+  .videos-section .carousel-item-next {
+    transform: translateX(50%);
+  }  
+    .videos-section .carousel-item-left.active, 
+    .videos-section .carousel-item-prev {
+      transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 992px) {
+    
+    .videos-section .carousel-item-right.active,
+    .videos-section .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .videos-section .carousel-item-left.active, 
+    .videos-section .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.videos-section .carousel-item-right,
+.videos-section .carousel-item-left{ 
+  transform: translateX(0);
+}
